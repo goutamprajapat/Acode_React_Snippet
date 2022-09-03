@@ -1,4 +1,38 @@
 # react properties
+#import react
+snippet impr:react
+	import * as React from 'react';
+#import react & component
+snippet imrc:react+Component
+	import * as React from 'react';
+	import { Component } from 'react';
+#import component
+snippet imc:react Component
+	import { Component } from 'react';
+#import react usestate
+snippet imrs:react useState 
+	import * as React from 'react';
+	import { useState } from 'react';
+#import useState & usestate
+snippet imrse: react "state&Effect"
+	import * as React from 'react';
+	import { useState, useEffect } from 'react';
+#import pure component
+snippet impc 
+	import React, { PureComponent } from 'react';
+#export
+snippet exd 
+	export default ${TM_FILENAME_BASE};
+#impor browseroute route 
+snippet improut
+	import ReactDOM from "react-dom/client";
+	import { BrowserRouter, Routes, Route } from "react-router-dom";
+#blank code 
+snippet btag
+	<>
+	  ${0}
+	</>
+	 
 snippet rcc
 	import React { Component } from 'react';
 	class ${1:${TM_FILENAME_BASE}} extends Component{
@@ -583,8 +617,9 @@ snippet usfu
 snippet  usfd
 	useEffect(() => {$0}[])
 #link
-snippet link:jsx
-	<link to="${1}" className="${0}" ></link>
+snippet link:react router
+	<link to="${1
+	}" className="${0}" ></link>
 #-----------------------_-------
 #javascript
 # Prototype
