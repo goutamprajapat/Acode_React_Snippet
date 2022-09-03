@@ -1,0 +1,1533 @@
+# react properties
+snippet rcc
+	import React { Component } from 'react';
+	class ${1:${TM_FILENAME_BASE}} extends Component{
+	render() {
+	return (
+	<div>
+	<h1>${0:${TM_FILENAME_BASE}} </h1>
+	</div>
+	);}
+	export default ${1:${TM_FILENAME_BASE}};
+	
+#react redux component
+snippet rrc
+	import React { Component } from 'react';
+	import { Connect} from 'react-redux';
+	function mapStateToProps(state) {
+		return {};
+	}
+	class ${1:${TM_FILENAME_BASE}} extends Component{
+	render() {
+	return (
+	<div>
+	<h1>${0:${TM_FILENAME_BASE}} </h1>
+	</div>
+	);}
+	export default Connect(tmapStateToProps) ${1:${TM_FILENAME_BASE}};
+# reactredux despatch components 
+snippet rrdc
+	export default ${1:${TM_FILENAME_BASE}};
+	import React { Component } from 'react';
+	import { Connect } from 'react-redux';
+	function mapStateToProps(state) {
+	return {};}
+	function mapDispatchToProps(dispatch) {
+	return {};
+	class ${1:${TM_FILENAME_BASE}} extends Component {
+	render() {
+	return (
+	<div
+	<h1>${0:${TM_FILENAME_BASE}} </h1>
+	</div>
+	);}
+	export default Connect(mapStateToProps
+	)(${1:${TM_FILENAME_BASE}})
+#reactjustClaasComponents
+snippet rcjc
+	class ${1:${TM_FILENAME_BASE}} extends Component {
+	 render() {
+	    return (
+	      <div>
+	         $0
+	      </div>
+	    );
+	  }
+	}
+#reactjustClaasComponents
+snippet rccp
+	import React { Component } from 'react';
+	import PropTypes from 'prop-types';
+	class ${1:${TM_FILENAME_BASE}} extends Component {
+			render() {
+				return (
+					<div>
+							$0
+					</div>
+				);
+			}
+		}
+	${1:${TM_FILENAME_BASE}}.propTypes = {
+	};
+	export default ${1:${TM_FILENAME_BASE}};
+#reactClassComponentsWithMethod
+snippet rcfc
+	import React { Component } from 'react';
+	import PropTypes from 'prop-types';
+	class ${1:${TM_FILENAME_BASE}} extends Component {Constructor(props) {
+			super(props);
+				this.state = {
+			}
+		}
+	static getDerivedStateFromProps() {
+	return null
+		}
+	componentDidMount() {
+		}
+
+	getSnapshotBeforeUpdate(prevProps prevState)
+	{return null
+		}
+	componentDidUpdate(prevProps prevState snapshot) {
+		}
+	componentWillUnmount() {
+		}
+		render() {
+			return (
+				<div>
+				$0
+				</div>
+			);
+		}
+	}
+	${1:${TM_FILENAME_BASE}}.propTypes = {
+	};
+	export default ${1:${TM_FILENAME_BASE}};
+#reactWithWebpackDefaults
+snippet rwwd 
+	class ${1:${TM_FILENAME_BASE}} extends React.Component {
+			Constructor(props) {
+				super(props);
+					this.state = {};
+							}
+							render() {
+								return (
+										<div>
+												$0
+										</div>
+						);
+				}
+	}
+	${1:${TM_FILENAME_BASE}}.propTypes = {}
+	export default ${1:${TM_FILENAME_BASE}}
+#reactPureComponent
+snippet rpc
+	import React { PureComponent } from 'react';
+	import PropTypes from 'prop-types';
+	class ${1:${TM_FILENAME_BASE}} extends PureComponent {
+	render() {
+		return (
+			<div>
+				$0
+			</div>
+			);
+		}
+	}
+	${1:${TM_FILENAME_BASE}}.propTypes = {
+		
+	};
+	export default ${1:${TM_FILENAME_BASE}};
+#reactStateless
+snippet rsc
+	const ${1:${TM_FILENAME_BASE}} = () => {
+	  return (
+	    <div>
+	   $0
+	   </div>
+	    );
+	};
+	export default ${1:${TM_FILENAME_BASE}};
+
+#reactStatelessProps
+snippet rscp
+	import React from 'react';
+	import PropTypes from 'prop-types';
+	const ${1:${TM_FILENAME_BASE}} = props => {
+		return (
+			<div>
+			  //body...
+			</div>
+			);
+		};
+	${1:${TM_FILENAME_BASE}}.propTypes = {
+	$0
+		
+	};
+	export default ${1:${TM_FILENAME_BASE}};
+	
+	
+#reactHookProps
+snippet rhc
+	import React{ useState } from 'react';
+	import PropTypes from 'prop-types';
+			const ${1:${TM_FILENAME_BASE}} = props => {
+				return (
+					<div>
+					$0
+					</div>
+			);
+		};
+	${1:${TM_FILENAME_BASE}}.propTypes = {
+		$0
+		};
+	export default ${1:${TM_FILENAME_BASE}};
+
+
+#reactMemo
+snippet rscm
+	import React { memo } from 'react';
+	const ${1:${TM_FILENAME_BASE}} = memo(() => {
+			return (
+				<div>
+			   	$0
+				</div>
+				);
+		}
+	);
+	export default ${1:${TM_FILENAME_BASE}}
+
+#reactMemoProps
+snippet rscpm
+	import React { memo } from 'react';
+	import PropTypes from 'prop-types';
+	const ${1:${TM_FILENAME_BASE}} = memo((props) => {
+			return (
+				<div>
+				</div>
+				);
+			});
+	${1:${TM_FILENAME_BASE}}.propTypes = {$0};
+	export default ${1:${TM_FILENAME_BASE}};
+	
+	
+#flowStatelessComponent
+snippet fsc
+	// @flow 
+	import * as React from 'react';
+	type Props = {
+	$0
+	};
+	export const ${1:${TM_FILENAME_BASE}} = (props: Props) => {
+			return (
+				<div>
+				</div>
+		);
+	};
+	
+	
+#flowStatelessFunction
+snippet fsf
+		// @flow
+		import * as React from 'react';
+			type Props = {
+				$0
+			};
+		export function ${1:${TM_FILENAME_BASE}}(props: Props) {
+			return (
+					<div>
+				 </div>
+				);
+		};
+		
+		
+		
+#flowClassComponent
+snippet fcc
+		// @flow
+		import * as React from 'react';
+			type Props = {
+				$0
+			};
+		type State = {
+			$1
+			};
+		export class ${2:${TM_FILENAME_BASE}} extends React.Component<Props State>{
+			render() {
+				return (
+					<div>
+					</div>
+				);
+			};
+		};
+
+
+
+#reactStatelessFunction
+snippet rsf
+	import React from 'react';
+	function ${1:${TM_FILENAME_BASE}}(props) {
+			return (
+				<div>
+				</div>
+			);}
+	export default ${1:${TM_FILENAME_BASE}};
+	
+#reactStatelessFunctionProps
+snippet rsfp
+	import React from 'react';
+	import PropTypes from 'prop-types';
+			${1:${TM_FILENAME_BASE}}.propTypes = {$0};
+				function ${1:${TM_FILENAME_BASE}}(props) {
+			return (
+				<div>
+				</div>
+			);
+	}
+	export default ${1:${TM_FILENAME_BASE}};
+	
+	
+	
+	
+#reactStatelessImplicitReturn
+snippet rsi
+	import React from 'react';
+	const ${1:${TM_FILENAME_BASE}} = (props) => (
+	$0
+	);
+	export default ${1:${TM_FILENAME_BASE}};
+
+
+#classConstructor
+snippet con
+	Constructor(props) {
+	super(props);
+	$0}
+	
+#classConstructorContext
+snippet conc
+	Constructor(props context) {
+	super(props context);
+	$0
+	}
+	
+#emptyState
+snippet est
+	this.state = {$1};
+	
+#componentWillMount
+snippet cwm
+	ComponentWillMount() {$0}
+	
+	
+#componentDidMount
+snippet cdm
+	ComponentDidMount() {$0}
+	
+#componentWillReceiveProps
+snippet cwr
+	ComponentWillReceiveProps(nextProps) {$0}
+	
+	
+	
+	
+#shouldComponentUpdate
+snippet scu
+	shouldComponentUpdate(nextProps nextState) {$0}
+	
+	
+#componentWillUpdate
+snippet cwup
+	ComponentWillUpdate(nextProps nextState) {$0}
+#componentDidUpdate
+snippet cdup
+	ComponentDidUpdate(prevProps prevState) {
+	$0
+		
+	}
+	
+#componentWillUnmount
+snippet cwun
+	ComponentWillUnmount() {
+	$0
+		
+	}
+	
+#ComponentRender
+snippet ren
+	render() {
+			return (
+			<div>
+				$0
+			</div>
+		);
+	}
+#ComponentSetStateObject
+snippet sst
+	this.setState(
+	$0
+	);
+	
+#componentSetStateFunc
+snippet ssf
+	this.setState((state props) => { 
+	return { $0 }
+		}
+	);
+#ComponentProps
+snippet props
+	this.props.$0
+	
+	
+#componentState
+snippet state
+	this.state.$0
+
+#bindThis
+snippet bnd
+	this.$1 = this.$1.bind(this);$0
+	
+#propTypes
+snippet rpt
+	${1:$TM_FILENAME_BASE}.propTypes = {$2};
+
+#defaultProps
+snippet rdp
+	${1:$TM_FILENAME_BASE}.defaultProps = {$2};
+#propTypeArray
+snippet pta
+	PropTypes.array
+	
+#propTypeArrayRequired: {
+snippet ptar
+	PropTypes.array.isRequired
+	
+#propTypeBool
+snippet ptb
+	propTypes.bool
+	
+#propTypeBoolRequired
+snippet ptbr
+	PropTypes.bool.isRequired
+	
+#propTypeFunc
+snippet ptf
+	PropTypes.func
+	
+#propTypeFuncRequired
+snippet ptfr
+	PropTypes.func.isRequired
+
+#propTypeNumber
+snippet ptn
+	PropTypes.number
+	
+#propTypeNumberRequired
+snippet ptnr
+	PropTypes.number.isRequired
+	
+	
+#propTypeObject
+snippet pto
+	PropTypes.object
+	
+#propTypeObjectRequired
+snippet ptor
+	PropTypes.object.isRequired
+	
+#propTypeString
+snippet pts
+	PropTypes.string
+	
+#propTypeStringRequired
+snippet ptsr
+	PropTypes.string.isRequired
+#propTypeSymbol
+snippet ptsm
+	PropTypes.symbol
+	
+	
+#propTypeSymbolRequired
+snippet ptsmr
+	PropTypes.symbol.isRequired
+
+
+#propTypeAny
+snippet ptan
+	PropTypes.any
+	
+#propTypeAnyRequired
+snippet ptanr
+	PropTypes.any.isRequired
+	
+#propTypeNode
+snippet ptnd
+	PropTypes.node
+
+
+#propTypeNodeRequired
+snippet  ptndr
+	PropTypes.node.isRequired
+	
+
+#propTypeElement
+snippet  ptel
+	PropTypes.element
+	
+	
+#propTypeElementRequired
+snippet  ptelr
+	PropTypes.element.isRequired
+	
+#propTypeInstanceOf
+snippet pti
+	PropTypes.instanceOf($0)
+	
+	
+#propTypeInstanceOfRequired
+snippet ptir
+	PropTypes.instanceOf($0).isRequired
+
+
+#propTypeEnum
+snippet pte
+	PropTypes.oneOf(['$0'])
+	
+	
+#propTypeEnumRequired
+snippet pter
+	PropTypes.oneOf(['$0']).isRequired
+
+#propTypeOneOfType
+snippet ptet
+	PropTypes.oneOfType([
+	$0
+	])
+	
+#propTypeOneOfTypeRequired
+snippet ptetr
+	PropTypes.oneOfType([$0]).isRequired
+
+#propTypeArrayOf
+snippet ptao
+	PropTypes.arrayOf($0)
+	
+	
+#propTypeArrayOfRequired
+snippet ptaor
+	PropTypes.arrayOf($0).isRequired
+
+#propTypeObjectOf
+snippet ptoo
+	PropTypes.objectOf($0)
+	
+
+#propTypeObjectOfRequired
+snippet ptoor
+	PropTypes.objectOf($0).isRequired
+
+#propTypeObjectOfShape
+snippet ptoos
+	PropTypes.objectOf(PropTypes.shape(
+	$0
+	))
+	
+#propTypeObjectOfShapeRequired
+snippet ptoosr
+	PropTypes.objectOf(PropTypes.shape($0)).isRequired
+
+
+#propTypeShape
+snippet ptsh
+	PropTypes.shape({$0})
+	
+#propTypeShapeRequired
+snippet  ptshr
+	PropTypes.shape({$0}).isRequired
+
+#getSnapshotBeforeUpdate
+snippet gsbu
+	getSnapshotBeforeUpdate(prevProps prevState) {
+		$0
+		}
+		
+#getDerivedStateFromProps
+snippet gdsfp
+	static getDerivedStateFromProps(nextProps prevState) {$0}
+	
+	
+#componentDidCatch
+snippet cdc
+	componentDidCatch(error info) {$0}
+	
+#dispatchRedux
+snippet disp
+	function mapDispatchToProps(dispatch) {
+	return {
+		
+	}}
+	
+#useEffect
+snippet usf
+	useEffect(() => {
+	$0
+	})
+	
+#useEffectUnMount
+snippet usfu
+	useEffect(() => {$0 return () => {
+	$0
+	}
+	})
+
+#useEffectDidMount
+snippet  usfd
+	useEffect(() => {$0}[])
+#link
+snippet link:jsx
+	<link to="${1}" className="${0}" ></link>
+#-----------------------_-------
+#javascript
+# Prototype
+snippet proto
+	${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) {
+		${4:// body...}
+	};
+# Function
+snippet fun
+	function ${1?:function_name}(${2:argument}) {
+		${3:// body...}
+	}
+# Anonymous Function
+regex /((=)\s*|(:)\s*|(\()|\b)/f/(\))?/
+snippet f
+	function${M1?: ${1:functionName}}($2) {
+		${0:$TM_SELECTED_TEXT}
+	}${M2?;}${M3?,}${M4?)}
+# Immediate function
+trigger \(?f\(
+endTrigger \)?
+snippet f(
+	(function(${1}) {
+		${0:${TM_SELECTED_TEXT:/* code */}}
+	}(${1}));
+# if
+snippet if
+	if (${1:true}) {
+		${0}
+	}
+# if ... else
+snippet ife
+	if (${1:true}) {
+		${2}
+	} else {
+		${0}
+	}
+# tertiary conditional
+snippet ter
+	${1:/* condition */} ? ${2:a} : ${3:b}
+# switch
+snippet switch
+	switch (${1:expression}) {
+		case '${3:case}':
+			${4:// code}
+			break;
+		${5}
+		default:
+			${2:// code}
+	}
+# case
+snippet case
+	case '${1:case}':
+		${2:// code}
+		break;
+	${3}
+
+# while (...) {...}
+snippet wh
+	while (${1:/* condition */}) {
+		${0:/* code */}
+	}
+# try
+snippet try
+	try {
+		${0:/* code */}
+	} catch (e) {}
+# do...while
+snippet do
+	do {
+		${2:/* code */}
+	} while (${1:/* condition */});
+# Object Method
+snippet :f
+regex /([,{[])|^\s*/:f/
+	${1:method_name}: function(${2:attribute}) {
+		${0}
+	}${3:,}
+# setTimeout function
+snippet setTimeout
+regex /\b/st|timeout|setTimeo?u?t?/
+	setTimeout(function() {${3:$TM_SELECTED_TEXT}}, ${1:10});
+# Get Elements
+snippet gett
+	getElementsBy${1:TagName}('${2}')${3}
+# Get Element
+snippet get
+	getElementBy${1:Id}('${2}')${3}
+# console.log (Firebug)
+snippet cl
+	console.log(${1});
+# return
+snippet ret
+	return ${1:result}
+# for (property in object ) { ... }
+snippet fori
+	for (var ${1:prop} in ${2:Things}) {
+		${0:$2[$1]}
+	}
+# hasOwnProperty
+snippet has
+	hasOwnProperty(${1})
+# docstring
+snippet /**
+	/**
+	 * ${1:description}
+	 *
+	 */
+snippet @par
+regex /^\s*\*\s*/@(para?m?)?/
+	@param {${1:type}} ${2:name} ${3:description}
+snippet @ret
+	@return {${1:type}} ${2:description}
+# JSON.parse
+snippet jsonp
+	JSON.parse(${1:jstr});
+# JSON.stringify
+snippet jsons
+	JSON.stringify(${1:object});
+# self-defining function
+snippet sdf
+	var ${1:function_name} = function(${2:argument}) {
+		${3:// initial code ...}
+
+		$1 = function($2) {
+			${4:// main code}
+		};
+	}
+# singleton
+snippet sing
+	function ${1:Singleton} (${2:argument}) {
+		// the cached instance
+		var instance;
+
+		// rewrite the constructor
+		$1 = function $1($2) {
+			return instance;
+		};
+		
+		// carry over the prototype properties
+		$1.prototype = this;
+
+		// the instance
+		instance = new $1();
+
+		// reset the constructor pointer
+		instance.constructor = $1;
+
+		${3:// code ...}
+
+		return instance;
+	}
+# class
+snippet class
+regex /^\s*/clas{0,2}/
+	var ${1:class} = function(${20}) {
+		$40$0
+	};
+	
+	(function() {
+		${60:this.prop = ""}
+	}).call(${1:class}.prototype);
+	
+	exports.${1:class} = ${1:class};
+# 
+snippet for-
+	for (var ${1:i} = ${2:Things}.length; ${1:i}--; ) {
+		${0:${2:Things}[${1:i}];}
+	}
+# for (...) {...}
+snippet for
+	for (var ${1:i} = 0; $1 < ${2:Things}.length; $1++) {
+		${3:$2[$1]}$0
+	}
+# for (...) {...} (Improved Native For-Loop)
+snippet forr
+	for (var ${1:i} = ${2:Things}.length - 1; $1 >= 0; $1--) {
+		${3:$2[$1]}$0
+	}
+
+#modules
+snippet def
+	define(function(require, exports, module) {
+	"use strict";
+	var ${1/.*\///} = require("${1}");
+	
+	$TM_SELECTED_TEXT
+	});
+snippet req
+guard ^\s*
+	var ${1/.*\///} = require("${1}");
+	$0
+snippet requ
+guard ^\s*
+	var ${1/.*\/(.)/\u$1/} = require("${1}").${1/.*\/(.)/\u$1/};
+	$0
+
+
+#_______________________________________
+#html
+# Some useful Unicode entities
+# Non-Breaking Space
+snippet nbs
+	&nbsp;
+# ←
+snippet left
+	&#x2190;
+# →
+snippet right
+	&#x2192;
+# ↑
+snippet up
+	&#x2191;
+# ↓
+snippet down
+	&#x2193;
+# ↩
+snippet return
+	&#x21A9;
+# ⇤
+snippet backtab
+	&#x21E4;
+# ⇥
+snippet tab
+	&#x21E5;
+# ⇧
+snippet shift
+	&#x21E7;
+# ⌃
+snippet ctrl
+	&#x2303;
+# ⌅
+snippet enter
+	&#x2305;
+# ⌘
+snippet cmd
+	&#x2318;
+# ⌥
+snippet option
+	&#x2325;
+# ⌦
+snippet delete
+	&#x2326;
+# ⌫
+snippet backspace
+	&#x232B;
+# ⎋
+snippet esc
+	&#x238B;
+# Attributes
+snippet attr
+	${1:attribute}="${2:property}"
+snippet attr+
+	${1:attribute}="${2:property}" attr+${3}
+snippet .
+	className="${1}"${2}
+snippet #
+	id="${1}"${2}
+snippet alt
+	alt="${1}"${2}
+snippet charset
+	charset="${1:utf-8}"${2}
+snippet data
+	data-${1}="${2:$1}"${3}
+snippet for
+	for="${1}"${2}
+snippet height
+	height="${1}"${2}
+snippet href
+	href="${1:#}"${2}
+snippet lang
+	lang="${1:en}"${2}
+snippet media
+	media="${1}"${2}
+snippet name
+	name="${1}"${2}
+snippet rel
+	rel="${1}"${2}
+snippet scope
+	scope="${1:row}"${2}
+snippet src
+	src="${1}"${2}
+snippet title=
+	title="${1}"${2}
+snippet type
+	type="${1}"${2}
+snippet value
+	value="${1}"${2}
+snippet width
+	width="${1}"${2}
+# Elements
+snippet a
+	<a href="${1:#}">${2:$1}</a>
+snippet a.
+	<a className="${1}" href="${2:#}">${3:$1}</a>
+snippet a#
+	<a id="${1}" href="${2:#}">${3:$1}</a>
+snippet a:ext
+	<a href="http://${1:example.com}">${2:$1}</a>
+snippet a:mail
+	<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a>
+snippet abbr
+	<abbr title="${1}">${2}</abbr>
+snippet address
+	<address>
+		${1}
+	</address>
+snippet area
+	<area shape="${1:rect}" coords="${2}" href="${3}" alt="${4}" />
+snippet area+
+	<area shape="${1:rect}" coords="${2}" href="${3}" alt="${4}" />
+	area+${5}
+snippet area:c
+	<area shape="circle" coords="${1}" href="${2}" alt="${3}" />
+snippet area:d
+	<area shape="default" coords="${1}" href="${2}" alt="${3}" />
+snippet area:p
+	<area shape="poly" coords="${1}" href="${2}" alt="${3}" />
+snippet area:r
+	<area shape="rect" coords="${1}" href="${2}" alt="${3}" />
+snippet article
+	<article>
+		${1}
+	</article>
+snippet article.
+	<article className="${1}">
+		${2}
+	</article>
+snippet article#
+	<article id="${1}">
+		${2}
+	</article>
+snippet aside
+	<aside>
+		${1}
+	</aside>
+snippet aside.
+	<aside className="${1}">
+		${2}
+	</aside>
+snippet aside#
+	<aside id="${1}">
+		${2}
+	</aside>
+snippet audio
+	<audio src="${1}>${2}</audio>
+snippet b
+	<b>${1}</b>
+snippet base
+	<base href="${1}" target="${2}" />
+snippet bdi
+	<bdi>${1}</bdo>
+snippet bdo
+	<bdo dir="${1}">${2}</bdo>
+snippet bdo:l
+	<bdo dir="ltr">${1}</bdo>
+snippet bdo:r
+	<bdo dir="rtl">${1}</bdo>
+snippet blockquote
+	<blockquote>
+		${1}
+	</blockquote>
+snippet body
+	<body>
+		${1}
+	</body>
+snippet br
+	<br />${1}
+snippet button
+	<button type="${1:submit}">${2}</button>
+snippet button.
+	<button className="${1:button}" type="${2:submit}">${3}</button>
+snippet button#
+	<button id="${1}" type="${2:submit}">${3}</button>
+snippet button:s
+	<button type="submit">${1}</button>
+snippet button:r
+	<button type="reset">${1}</button>
+snippet canvas
+	<canvas id="${1:canvas}"></canvas>
+snippet caption
+	<caption>${1}</caption>
+snippet cite
+	<cite>${1}</cite>
+snippet code
+	<code>${1}</code>
+snippet col
+	<col />${1}
+snippet col+
+	<col />
+	col+${1}
+snippet colgroup
+	<colgroup>
+		${1}
+	</colgroup>
+snippet colgroup+
+	<colgroup>
+		<col />
+		col+${1}
+	</colgroup>
+snippet command
+	<command type="command" label="${1}" icon="${2}" />
+snippet command:c
+	<command type="checkbox" label="${1}" icon="${2}" />
+snippet command:r
+	<command type="radio" radiogroup="${1}" label="${2}" icon="${3}" />
+snippet datagrid
+	<datagrid>
+		${1}
+	</datagrid>
+snippet datalist
+	<datalist>
+		${1}
+	</datalist>
+snippet datatemplate
+	<datatemplate>
+		${1}
+	</datatemplate>
+snippet dd
+	<dd>${1}</dd>
+snippet dd.
+	<dd className="${1}">${2}</dd>
+snippet dd#
+	<dd id="${1}">${2}</dd>
+snippet del
+	<del>${1}</del>
+snippet details
+	<details>${1}</details>
+snippet dfn
+	<dfn>${1}</dfn>
+snippet dialog
+	<dialog>
+		${1}
+	</dialog>
+snippet div
+	<div>
+		${1}
+	</div>
+snippet div.
+	<div className="${1}">
+		${2}
+	</div>
+snippet div#
+	<div id="${1}">
+		${2}
+	</div>
+snippet dl
+	<dl>
+		${1}
+	</dl>
+snippet dl.
+	<dl className="${1}">
+		${2}
+	</dl>
+snippet dl#
+	<dl id="${1}">
+		${2}
+	</dl>
+snippet dl+
+	<dl>
+		<dt>${1}</dt>
+		<dd>${2}</dd>
+		dt+${3}
+	</dl>
+snippet dt
+	<dt>${1}</dt>
+snippet dt.
+	<dt className="${1}">${2}</dt>
+snippet dt#
+	<dt id="${1}">${2}</dt>
+snippet dt+
+	<dt>${1}</dt>
+	<dd>${2}</dd>
+	dt+${3}
+snippet em
+	<em>${1}</em>
+snippet embed
+	<embed src=${1} type="${2} />
+snippet fieldset
+	<fieldset>
+		${1}
+	</fieldset>
+snippet fieldset.
+	<fieldset className="${1}">
+		${2}
+	</fieldset>
+snippet fieldset#
+	<fieldset id="${1}">
+		${2}
+	</fieldset>
+snippet fieldset+
+	<fieldset>
+		<legend><span>${1}</span></legend>
+		${2}
+	</fieldset>
+	fieldset+${3}
+snippet figcaption
+	<figcaption>${1}</figcaption>
+snippet figure
+	<figure>${1}</figure>
+snippet footer
+	<footer>
+		${1}
+	</footer>
+snippet footer.
+	<footer className="${1}">
+		${2}
+	</footer>
+snippet footer#
+	<footer id="${1}">
+		${2}
+	</footer>
+snippet form
+	<form action="${1}" method="${2:get}" accept-charset="utf-8">
+		${3}
+	</form>
+snippet form.
+	<form className="${1}" action="${2}" method="${3:get}" accept-charset="utf-8">
+		${4}
+	</form>
+snippet form#
+	<form id="${1}" action="${2}" method="${3:get}" accept-charset="utf-8">
+		${4}
+	</form>
+snippet h1
+	<h1>${1}</h1>
+snippet h1.
+	<h1 className="${1}">${2}</h1>
+snippet h1#
+	<h1 id="${1}">${2}</h1>
+snippet h2
+	<h2>${1}</h2>
+snippet h2.
+	<h2 className="${1}">${2}</h2>
+snippet h2#
+	<h2 id="${1}">${2}</h2>
+snippet h3
+	<h3>${1}</h3>
+snippet h3.
+	<h3 className="${1}">${2}</h3>
+snippet h3#
+	<h3 id="${1}">${2}</h3>
+snippet h4
+	<h4>${1}</h4>
+snippet h4.
+	<h4 className="${1}">${2}</h4>
+snippet h4#
+	<h4 id="${1}">${2}</h4>
+snippet h5
+	<h5>${1}</h5>
+snippet h5.
+	<h5 className="${1}">${2}</h5>
+snippet h5#
+	<h5 id="${1}">${2}</h5>
+snippet h6
+	<h6>${1}</h6>
+snippet h6.
+	<h6 className="${1}">${2}</h6>
+snippet h6#
+	<h6 id="${1}">${2}</h6>
+snippet header
+	<header>
+		${1}
+	</header>
+snippet header.
+	<header className="${1}">
+		${2}
+	</header>
+snippet header#
+	<header id="${1}">
+		${2}
+	</header>
+snippet hgroup
+	<hgroup>
+		${1}
+	</hgroup>
+snippet hgroup.
+	<hgroup className="${1}>
+		${2}
+	</hgroup>
+snippet hr
+	<hr />${1}
+snippet i
+	<i>${1}</i>
+snippet iframe
+	<iframe src="${1}" frameborder="0"></iframe>${2}
+snippet iframe.
+	<iframe className="${1}" src="${2}" frameborder="0"></iframe>${3}
+snippet iframe#
+	<iframe id="${1}" src="${2}" frameborder="0"></iframe>${3}
+snippet img
+	<img src="${1}" alt="${2}" />${3}
+snippet img.
+	<img className="${1}" src="${2}" alt="${3}" />${4}
+snippet img#
+	<img id="${1}" src="${2}" alt="${3}" />${4}
+snippet input
+	<input type="${1:text/submit/hidden/button/image}" name="${2}" id="${3:$2}" value="${4}" />${5}
+snippet input.
+	<input className="${1}" type="${2:text/submit/hidden/button/image}" name="${3}" id="${4:$3}" value="${5}" />${6}
+snippet input:text
+	<input type="text" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:submit
+	<input type="submit" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:hidden
+	<input type="hidden" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:button
+	<input type="button" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:image
+	<input type="image" name="${1}" id="${2:$1}" src="${3}" alt="${4}" />${5}
+snippet input:checkbox
+	<input type="checkbox" name="${1}" id="${2:$1}" />${3}
+snippet input:radio
+	<input type="radio" name="${1}" id="${2:$1}" />${3}
+snippet input:color
+	<input type="color" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:date
+	<input type="date" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:datetime
+	<input type="datetime" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:datetime-local
+	<input type="datetime-local" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:email
+	<input type="email" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:file
+	<input type="file" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:month
+	<input type="month" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:number
+	<input type="number" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:password
+	<input type="password" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:range
+	<input type="range" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:reset
+	<input type="reset" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:search
+	<input type="search" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:time
+	<input type="time" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:url
+	<input type="url" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet input:week
+	<input type="week" name="${1}" id="${2:$1}" value="${3}" />${4}
+snippet ins
+	<ins>${1}</ins>
+snippet kbd
+	<kbd>${1}</kbd>
+snippet keygen
+	<keygen>${1}</keygen>
+snippet label
+	<label for="${2:$1}">${1}</label>
+snippet label:i
+	<label for="${2:$1}">${1}</label>
+	<input type="${3:text/submit/hidden/button}" name="${4:$2}" id="${5:$2}" value="${6}" />${7}
+snippet label:s
+	<label for="${2:$1}">${1}</label>
+	<select name="${3:$2}" id="${4:$2}">
+		<option value="${5}">${6:$5}</option>
+	</select>
+snippet legend
+	<legend>${1}</legend>
+snippet legend+
+	<legend><span>${1}</span></legend>
+snippet li
+	<li>${1}</li>
+snippet li.
+	<li className="${1}">${2}</li>
+snippet li+
+	<li>${1}</li>
+	li+${2}
+snippet lia
+	<li><a href="${2:#}">${1}</a></li>
+snippet lia+
+	<li><a href="${2:#}">${1}</a></li>
+	lia+${3}
+snippet link
+	<link rel="${1}" href="${2}" title="${3}" type="${4}" />${5}
+
+snippet link:favicon
+	<link rel="shortcut icon" href="${1:favicon.ico}" type="image/x-icon" />${2}
+snippet link:rss
+	<link rel="alternate" href="${1:rss.xml}" title="RSS" type="application/atom+xml" />${2}
+snippet link:touch
+	<link rel="apple-touch-icon" href="${1:favicon.png}" />${2}
+snippet map
+	<map name="${1}">
+		${2}
+	</map>
+snippet map.
+	<map className="${1}" name="${2}">
+		${3}
+	</map>
+snippet map#
+	<map name="${1}" id="${2:$1}>
+		${3}
+	</map>
+snippet map+
+	<map name="${1}">
+		<area shape="${2}" coords="${3}" href="${4}" alt="${5}" />${6}
+	</map>${7}
+snippet mark
+	<mark>${1}</mark>
+snippet menu
+	<menu>
+		${1}
+	</menu>
+snippet menu:c
+	<menu type="context">
+		${1}
+	</menu>
+snippet menu:t
+	<menu type="toolbar">
+		${1}
+	</menu>
+snippet meter
+	<meter>${1}</meter>
+snippet nav
+	<nav>
+		${1}
+	</nav>
+snippet nav.
+	<nav className="${1}">
+		${2}
+	</nav>
+snippet nav#
+	<nav id="${1}">
+		${2}
+	</nav>
+snippet noscript
+	<noscript>
+		${1}
+	</noscript>
+snippet object
+	<object data="${1}" type="${2}">
+		${3}
+	</object>${4}
+# Embed QT Movie
+snippet movie
+	<object width="$2" height="$3" classNameid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B"
+	 codebase="http://www.apple.com/qtactivex/qtplugin.cab">
+		<param name="src" value="$1" />
+		<param name="controller" value="$4" />
+		<param name="autoplay" value="$5" />
+		<embed src="${1:movie.mov}"
+			width="${2:320}" height="${3:240}"
+			controller="${4:true}" autoplay="${5:true}"
+			scale="tofit" cache="true"
+			pluginspage="http://www.apple.com/quicktime/download/" />
+	</object>${6}
+snippet ol
+	<ol>
+		${1}
+	</ol>
+snippet ol.
+	<ol className="${1}>
+		${2}
+	</ol>
+snippet ol#
+	<ol id="${1}>
+		${2}
+	</ol>
+snippet ol+
+	<ol>
+		<li>${1}</li>
+		li+${2}
+	</ol>
+snippet opt
+	<option value="${1}">${2:$1}</option>
+snippet opt+
+	<option value="${1}">${2:$1}</option>
+	opt+${3}
+snippet optt
+	<option>${1}</option>
+snippet optgroup
+	<optgroup>
+		<option value="${1}">${2:$1}</option>
+		opt+${3}
+	</optgroup>
+snippet output
+	<output>${1}</output>
+snippet p
+	<p>${1}</p>
+snippet param
+	<param name="${1}" value="${2}" />${3}
+snippet pre
+	<pre>
+		${1}
+	</pre>
+snippet progress
+	<progress>${1}</progress>
+snippet q
+	<q>${1}</q>
+snippet rp
+	<rp>${1}</rp>
+snippet rt
+	<rt>${1}</rt>
+snippet ruby
+	<ruby>
+		<rp><rt>${1}</rt></rp>
+	</ruby>
+snippet s
+	<s>${1}</s>
+snippet samp
+	<samp>
+		${1}
+	</samp>
+snippet script
+	<script type="text/javascript" charset="utf-8">
+		${1}
+	</script>
+snippet scriptsrc
+	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>
+snippet newscript
+	<script type="application/javascript" charset="utf-8">
+		${1}
+	</script>
+snippet newscriptsrc
+	<script src="${1}.js" type="application/javascript" charset="utf-8"></script>
+snippet section
+	<section>
+		${1}
+	</section>
+snippet section.
+	<section className="${1}">
+		${2}
+	</section>
+snippet section#
+	<section id="${1}">
+		${2}
+	</section>
+snippet select
+	<select name="${1}" id="${2:$1}">
+		${3}
+	</select>
+snippet select.
+	<select name="${1}" id="${2:$1}" className="${3}>
+		${4}
+	</select>
+snippet select+
+	<select name="${1}" id="${2:$1}">
+		<option value="${3}">${4:$3}</option>
+		opt+${5}
+	</select>
+snippet small
+	<small>${1}</small>
+snippet source
+	<source src="${1}" type="${2}" media="${3}" />
+snippet span
+	<span>${1}</span>
+snippet strong
+	<strong>${1}</strong>
+snippet style
+	<style type="text/css" media="${1:all}">
+		${2}
+	</style>
+snippet sub
+	<sub>${1}</sub>
+snippet summary
+	<summary>
+		${1}
+	</summary>
+snippet sup
+	<sup>${1}</sup>
+snippet table
+	<table border="${1:0}">
+		${2}
+	</table>
+snippet table.
+	<table className="${1}" border="${2:0}">
+		${3}
+	</table>
+snippet table#
+	<table id="${1}" border="${2:0}">
+		${3}
+	</table>
+snippet tbody
+	<tbody>
+		${1}
+	</tbody>
+snippet td
+	<td>${1}</td>
+snippet td.
+	<td className="${1}">${2}</td>
+snippet td#
+	<td id="${1}">${2}</td>
+snippet td+
+	<td>${1}</td>
+	td+${2}
+snippet textarea
+	<textarea name="${1}" id=${2:$1} rows="${3:8}" cols="${4:40}">${5}</textarea>${6}
+snippet tfoot
+	<tfoot>
+		${1}
+	</tfoot>
+snippet th
+	<th>${1}</th>
+snippet th.
+	<th className="${1}">${2}</th>
+snippet th#
+	<th id="${1}">${2}</th>
+snippet th+
+	<th>${1}</th>
+	th+${2}
+snippet thead
+	<thead>
+		${1}
+	</thead>
+snippet time
+	<time datetime="${1}" pubdate="${2:$1}>${3:$1}</time>
+snippet title
+	<title>${1:`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`}</title>
+snippet tr
+	<tr>
+		${1}
+	</tr>
+snippet tr+
+	<tr>
+		<td>${1}</td>
+		td+${2}
+	</tr>
+snippet track
+	<track src="${1}" srclang="${2}" label="${3}" default="${4:default}>${5}</track>${6}
+snippet ul
+	<ul>
+		${1}
+	</ul>
+snippet ul.
+	<ul className="${1}">
+		${2}
+	</ul>
+snippet ul#
+	<ul id="${1}">
+		${2}
+	</ul>
+snippet ul+
+	<ul>
+		<li>${1}</li>
+		li+${2}
+	</ul>
+snippet var
+	<var>${1}</var>
+snippet video
+	<video src="${1}" height="${2}" width="${3}" preload="${5:none}" autoplay="${6:autoplay}">${7}</video>${8}
+snippet wbr
+	<wbr />${1}
